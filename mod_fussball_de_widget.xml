@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+    <!-- Name of the Module -->
+	<name>Fussball.de Widget</name> 
+ 
+    <!-- Name of the Author -->
+	<author>Pascal Link</author> 
+ 
+    <!-- Version Date of the Module -->
+	<creationDate>2012-07-24</creationDate> 
+ 
+    <!-- Copyright information -->
+	<copyright>All rights reserved by Pascal Link (C) 2012.</copyright> 
+ 
+    <!-- License Information -->
+	<license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+	<authorEmail>pascal.link@pl07.de</authorEmail> 
+ 
+    <!-- Author's website -->
+	<authorUrl>http://www.pl07.de</authorUrl> 
+ 
+    <!-- Module version number -->
+	<version>1.0.0</version> 
+ 
+    <!-- Description of what the module does -->
+	<description>Displays the fussball.de widget of a selected team</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+	<files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+		<filename module="mod_fussball_de_widget">mod_fussball_de_widget.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>css/mod_fussball_de_widget.css</filename>
+		<filename>css/mod_fussball_de_widget_print.css</filename>
+	</files>
+	<media folder="media" destination="mod_fussball_de_widget">
+		<folder>css</folder>
+	</media>
+ 
+    <!-- Optional parameters -->
+	<config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field 
+                        name="competition_title" 
+                        type="text" 
+                        default="" 
+                        label="Wettbewerbs-Titel" 
+                        description="Titel des Wettbewerbs, wird über dem Fussball.de Widget angezeigt.">
+                    </field>
+                    <field 
+                        name="team_key" 
+                        type="text" 
+                        default="" 
+                        label="Teamkürzel" 
+                        description="">
+                    </field>
+                     <field 
+                        name="@spacer" 
+                        type="spacer" 
+                        default="" 
+                        label="" 
+                        description="">
+                    </field>
+                     <field 
+                        name="table_id" 
+                        type="text" 
+                        default="0" 
+                        label="Tabelle ID" 
+                        description="ID des Bereiches, in dem die Tabelle angezeigt werden soll.">
+                    </field>
+                     <field 
+                        name="scores_id" 
+                        type="text" 
+                        default="0" 
+                        label="Ergebnisse ID" 
+                        description="ID des Bereiches, in dem die Bereiche angezeigt werden sollen.">
+                    </field>
+                     <field 
+                        name="@spacer1" 
+                        type="spacer" 
+                        default="" 
+                        label="" 
+                        description="">
+                    </field>
+                     <field 
+                        name="scores_url"  
+                        type="text" 
+                        default="http://" 
+                        label="Ergebnis-URL" 
+						size="100px"
+                        description="URL (http://) zu den Ergebnisse auf Fussball.de">
+                    </field>
+                     <field 
+                        name="table_url" 
+                        type="text" 
+                        default="http://" 
+						size="100px"
+                        label="Tabellen-URL" 
+                        description="URL (http://) zu der Tabelle auf Fussball.de">
+                    </field>
+                     <field 
+                        name="@spacer2" 
+                        type="spacer" 
+                        default="" 
+                        label="" 
+                        description="">
+                    </field>                     
+                     <field 
+                        name="scores_printurl"  
+                        type="text" 
+                        default="http://" 
+                        label="Ergebnis-Ausweich-URL" 
+						size="100px"
+                        description="URL (http://) zu den Ergebnisse als Druckversion auf Fussball.de">
+                    </field>
+                     <field 
+                        name="table_printurl" 
+                        type="text" 
+                        default="http://" 
+						size="100px"
+                        label="Tabellen-Ausweich-URL" 
+                        description="URL (http://) zu der Tabelle als Druckversion auf Fussball.de">
+                    </field>
+                     <field 
+                        name="@spacer2" 
+                        type="spacer" 
+                        default="" 
+                        label="" 
+                        description="">
+                    </field>
+					<field 
+                        name="season_key" 
+                        type="text" 
+                        default="1213" 
+                        label="Saison-Schlüssel" 
+                        description="Saison-Schlüssel (z.B. für 2012/2013 = 1213)">
+                    </field>
+                     <field 
+                        name="cc_id" 
+                        type="text" 
+                        default="340052" 
+                        label="Wettbewerbs-ID" 
+                        description="Wettebewerbs-ID">
+                    </field>
+                     <field 
+                        name="@spacer3" 
+                        type="spacer" 
+                        default="" 
+                        label="" 
+                        description="">
+                    </field>
+                </fieldset>
+            </fields>
+    </config>
+</extension>
