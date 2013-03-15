@@ -22,7 +22,7 @@
 	   </div>
 	</article>	
 	<article class="ac">
-		<header><h4 style="display:none">Fussball.de Widget Hinweise</h3></header>
+		<header style="display:none"><h4>Fussball.de Widget Hinweise</h3></header>
 		<p>
 			Bitte beachten Sie die <a href="/impressum/hinweise">Hinweise</a> zu den Widgets von Fussball.de.
 		</p>
