@@ -1,25 +1,37 @@
-﻿<?php defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
+﻿<?php 
+
+// no direct access
+defined('_JEXEC') or die;
+
+$app = JFactory::getApplication(); 
+$appParams  = $app->getParams();
+
+?>
+
+<?php defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 <section class="page-item ac" id="team_HEADER" teamkey="<?php echo $params->get('team_key'); ?>" itemscope itemtype="http://schema.org/Organization" typeof="SportsTeam">    
-    <header>
+    <header <?php if (!$appParams->get('show_page_heading', 1)) echo 'style="display:none"';?>>
     	<h1>
-            <?php echo $doc->getTitle(); ?>
+        	<?php echo $appParams->get('page_heading'); ?>
     	</h1>
     </header>
-    <article class="ac" id="fussball-de-widget">
+    <article class="ac" id="fussball-de-widget">	
         <header><h3><?php echo $params->get('competition_title'); ?></h3></header>
-		<div id="ergebnisse" onLoad="checkFussballDeWidget()">
-		   <section id="meinWettbewerb<?php echo htmlspecialchars($scores_id);?>_section">
-		       <header <?php if (!($module->showtitle)) { echo'style="display:none;"'; }?>><h4><?php echo $module->title; ?></h4></header>
-			   <div id="meinWettbewerb<?php echo htmlspecialchars($scores_id);?>"></div>
-		   </section>
-	   </div>
-	   
-	   <div id="ergebnisse" onLoad="checkFussballDeWidget()" <?php if($params->get('table_id') == "99") echo 'style="display:none""'; ?>>
-		   <section id="meinWettbewerb<?php echo htmlspecialchars($table_id);?>_section">
-		       <header <?php if (!($module->showtitle)) { echo'style="display:none;"'; }?>><h4><?php echo $module->title; ?></h4></header>
-			   <div id="meinWettbewerb<?php echo htmlspecialchars($table_id);?>"></div>
-		   </section>
-	   </div>
+		<div class="content">
+			<div class="ergebnisse" onLoad="checkFussballDeWidget()" <?php if($params->get('scores_id') == "99" || $params->get('scores_id') == "0") echo 'style="display:none""'; ?>>
+			   <section id="meinWettbewerb<?php echo htmlspecialchars($scores_id);?>_section">
+				   <header <?php if (!($module->showtitle)) { echo'style="display:none;"'; }?>><h4><?php echo $module->title; ?></h4></header>
+				   <div id="meinWettbewerb<?php echo htmlspecialchars($scores_id);?>"></div>
+			   </section>
+		   </div>
+		   
+		   <div class="tabelle" onLoad="checkFussballDeWidget()" <?php if($params->get('table_id') == "99" || $params->get('table_id') == "0") echo 'style="display:none""'; ?>>
+			   <section id="meinWettbewerb<?php echo htmlspecialchars($table_id);?>_section">
+				   <header <?php if (!($module->showtitle)) { echo'style="display:none;"'; }?>><h4><?php echo $module->title; ?></h4></header>
+				   <div id="meinWettbewerb<?php echo htmlspecialchars($table_id);?>"></div>
+			   </section>
+		   </div>
+		 </div>
 	</article>	
 	<article class="ac">
 		<header style="display:none"><h4>Fussball.de Widget Hinweise</h3></header>
@@ -38,10 +50,11 @@
 			wettbewerb0.zeigeWettbewerb('meinWettbewerb<?php echo htmlspecialchars($params->get('scores_id'));?>');
 			
 			var wettbewerb1 = new fussballdeAPI();
-            wettbewerb1.setzeSaison('<?php echo htmlspecialchars($params->get('season_key')); ?>');
+            <?php if($params->get('table_id') != '0') : ?>
+			wettbewerb1.setzeSaison('<?php echo htmlspecialchars($params->get('season_key')); ?>');
             wettbewerb1.setzeWettbewerbID('<?php echo htmlspecialchars($params->get('cc_id')); ?>');
 			wettbewerb1.zeigeTabelle('meinWettbewerb<?php echo htmlspecialchars($params->get('table_id'));?>');
-			
+			<?php endif; ?>
         } catch(e) {
             console.log('Fehler beim Fussball.de Widget'+e);
         }

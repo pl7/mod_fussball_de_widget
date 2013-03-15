@@ -35,11 +35,13 @@
 		<filename>helper.php</filename>
 		<filename>tmpl/default.php</filename>
 		<filename>tmpl/index.html</filename>
+		<filename>js/mod_fussball_de_widget.js</filename>
 		<filename>css/mod_fussball_de_widget.css</filename>
 		<filename>css/mod_fussball_de_widget_print.css</filename>
 	</files>
 	<media folder="media" destination="mod_fussball_de_widget">
 		<folder>css</folder>
+		<folder>js</folder>
 	</media>
  
     <!-- Optional parameters -->

@@ -121,90 +121,90 @@ Author URI: http://www.pl07.de
 
 /* Styles f?r die Ergebnis-Ansicht */
 
-#ergebnisse, #tabelle {
+.ergebnisse, .tabelle {
 	padding: 0.5em 10px;
 	float: none;
 }
 
-#ergebnisse #fussballdeAPI ,
-#tabelle #fussballdeAPI {
+#fussball-de-widget #fussballdeAPI {
   border: none !important;
   width: auto !important;
 }
-#ergebnisse #fussballdeAPI DIV.fbdeAPItoplogo {
+#fussball-de-widget #fussballdeAPI DIV.fbdeAPItoplogo {
   display: none !important;
   width: 0px !important;
   height: 0px !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-#ergebnisse #fussballdeAPI DIV.fbdeAPItoplogo DIV.fbdeAPItoplogoClick {
+#fussball-de-widget #fussballdeAPI DIV.fbdeAPItoplogo DIV.fbdeAPItoplogoClick {
   display: none !important;
 }
-#ergebnisse #fussballdeAPI DIV.fbdeAPItoplogo DIV.fbdeAPISuche{
+#fussball-de-widget #fussballdeAPI DIV.fbdeAPItoplogo DIV.fbdeAPISuche{
   display: none !important;
 }
-#ergebnisse #fussballdeAPI iframe {
+#fussball-de-widget #fussballdeAPI iframe {
   display: none !important;
   width: 0px !important;
   height: 0px !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-#ergebnisse #fussballdeAPI iframe #vmsb-widget-rubrik {
+#fussball-de-widget #fussballdeAPI iframe #vmsb-widget-rubrik {
   display: none !important;
 }
-#ergebnisse #fussballdeAPI DIV.fbdeAPItoplogo {
+#fussball-de-widget #fussballdeAPI DIV.fbdeAPItoplogo {
   display: none !important;
 }
-#fussballdeAPI #edBegegnungsliste DIV.SpieltagSuchblock {
+#fussball-de-widget #fussballdeAPI #edBegegnungsliste DIV.SpieltagSuchblock {
 /*  display: none !important;*/
     width: auto !important;
 }
-#fussballdeAPI div.SpieltagSuche {
+#fussball-de-widget #fussballdeAPI div.SpieltagSuche {
     float: right !important;    
 }
-#ergebnisse #fussballdeAPI #edKopf {
+#fussball-de-widget #fussballdeAPI #edKopf {
   display: none !important;
 }
-#ergebnisse #fussballdeAPI #edReiternavigation {
+#fussball-de-widget #fussballdeAPI #edReiternavigation {
   /*display: none !important;*/
 }
-#ergebnisse #fussballdeAPI TABLE {
+#fussball-de-widget #fussballdeAPI TABLE,
+#fussball-de-widget .content {
   width: 100% !important;
 }
-*HTML #ergebnisse #fussballdeAPI TABLE {
+*HTML #fussball-de-widget #fussballdeAPI TABLE {
   width: 100% !important;
 }
-#ergebnisse #fussballdeAPI TABLE.edKerntabelle THEAD TR TH {
+#fussball-de-widget #fussballdeAPI TABLE.edKerntabelle THEAD TR TH {
   color: white!important;
   background-color: #00004C!important;
   border-color: white!important;
   border-bottom: 1px solid #fff!important;
 }
-#ergebnisse #fussballdeAPI TABLE.edKerntabelle TBODY TR TD {
-  background-color: rgb(255,74,0) !important;
+#fussball-de-widget #fussballdeAPI TABLE.edKerntabelle TBODY TR TD {
+  background-color: #CECECE !important;
   border-color: #fff!important;
   font-weight: normal;
 }
-#ergebnisse #fussballdeAPI TABLE.edKerntabelle TR TD.edDatum {
-  color: #fff!important;
-  background: #ff4a00 !important;
-  font-weight: normal;
+#fussball-de-widget #fussballdeAPI TABLE.edKerntabelle TR TD.edDatum {
+  color: black!important;
+  background: #c3c3c3 !important;
+  font-weight: bold;
   font-family: helvetica, arial;
 }
-#ergebnisse #fussballdeAPI TABLE.edKerntabelle TR TD.fbdeAPIRowInactB {
+#fussball-de-widget #fussballdeAPI TABLE.edKerntabelle TR TD.fbdeAPIRowInactB {
   background-color: #EEEEEE !important;
   border-color: #CCCCCC !important;
 }
-#ergebnisse #fussballdeAPI TABLE.edKerntabelle TR TD.fbdeAPIRowInactA {
+#fussball-de-widget #fussballdeAPI TABLE.edKerntabelle TR TD.fbdeAPIRowInactA {
   background-color: #FFFFFF !important;
   border-color: #CCCCCC !important;
 }
-#ergebnisse #fussballdeAPI TABLE TR TD A {
+#fussball-de-widget #fussballdeAPI TABLE TR TD A {
   /*color: #00004C!important;*/
 }
-#ergebnisse #fussballdeAPI TABLE TR TD A.mouseOutColor {
+#fussball-de-widget #fussballdeAPI TABLE TR TD A.mouseOutColor {
   color: #3771C2 !important;
 }
 #fussballdeAPI TABLE TR TD.fbdeAPIAufsteigerInactA A,
@@ -216,14 +216,14 @@ Author URI: http://www.pl07.de
 #fussballdeAPI TABLE TR TD.fbdeAPIAbsteigerInactB,
 #fussballdeAPI TABLE TR TD.fbdeAPIAbsteigerInactA 
 {
-  color: #fff !important;
+  color: black !important;
 }
-#ergebnisse #fussballdeAPI #edBegegnungsliste DIV.verlegteSpiele {
+#fussball-de-widget #fussballdeAPI #edBegegnungsliste DIV.verlegteSpiele {
   padding-top: 10px !important;
   width: 520px !important;
   background-color: #FFFFFF !important;
 }
-#tabelle #fussballdeAPI tr:nth-child(3) td {
+#fussball-de-widget #fussballdeAPI tr:nth-child(3) td {
   background-color: organge !important;
 }
 {
@@ -233,25 +233,32 @@ Author URI: http://www.pl07.de
   color: #00004c !important;
 }
 
-#ergebnisse #fussballdeAPI TABLE TR TD A.svw,
-#ergebnisse #fussballdeAPI TABLE.edKerntabelle TBODY TR TD.svw,
-#ergebnisse #fussballdeAPI TABLE.edKerntabelle TR TD.fbdeAPIRowInactB.svw,
-#ergebnisse #fussballdeAPI TABLE.edKerntabelle TR TD.fbdeAPIRowInactA.svw {
+#fussball-de-widget #fussballdeAPI TABLE TR TD A.svw,
+#fussball-de-widget #fussballdeAPI TABLE.edKerntabelle TBODY TR TD.svw,
+#fussball-de-widget #fussballdeAPI TABLE.edKerntabelle TR TD.fbdeAPIRowInactB.svw,
+#fussball-de-widget #fussballdeAPI TABLE.edKerntabelle TR TD.fbdeAPIRowInactA.svw {
   font-weight: bold !important;
   font-size: 10pt !important;
   color: rgb(255,74,0) !important;
 }
-#ergebnisse #fussballdeAPI TABLE.edKerntabelle TBODY TR TD.fbdeAPIAufsteigerInactA.svw,
-#ergebnisse #fussballdeAPI TABLE TR TD.fbdeAPIAufsteigerInactA A.svw {
-  color: white !important;
+#fussball-de-widget #fussballdeAPI TABLE.edKerntabelle TBODY TR TD.fbdeAPIAufsteigerInactA.svw,
+#fussball-de-widget #fussballdeAPI TABLE TR TD.fbdeAPIAufsteigerInactA A.svw {
+  color: #ff4a00 !important;
 }
 
 #fussballdeAPI a.svw, 
 #fussballdeAPI a.mouseOutColor.svw, 
-#ergebnisse #fussballdeAPI TABLE TR TD A.mouseOutColor.svw {
+#fussball-de-widget #fussballdeAPI TABLE TR TD A.mouseOutColor.svw {
   color: rgb(255,74,0) !important;
 }
 
 #fussballdeAPI a.svw:hover {
  color: rgb(0,0,74) !important;
+}
+a.svw[title='Weiter zur Vereinsseite von SV Wiesbaden.']:before  {
+  background-image: url('/images/icons/svw_logo_traditon_aus_leidenschaft_150.jpg');
+  background-size: 16px 16px;
+  padding: 0px 6px;
+  content: '\1b\20';
+  margin-right: 0.2em;
 }
